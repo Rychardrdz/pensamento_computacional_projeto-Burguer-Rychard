@@ -12,7 +12,7 @@ while True:
     print("\n== Sistema da Hamburgueria ===")
     print("1. Cadastro") #Para o cliete criar a conta, irá precisar colocar o, Email, Numero de telefone, CPF
     print("2. Esqueceu a senha") #Enviar um codigo de 6 digitos para o email cadastrado, Criar nova senha
-    print("3. Menu 1") #Combos e opções
+    print("3. Menu") #Combos e opções
     print("4. Carrinho") #Adicionar os combos ou opções no carrinho
     print("5. Opções") #Retirar algum ingrediente
     print("6. Finalizar pedido") # O cliente precisará colocar o, CEP, Endereço, Numero da casa, Ponto de referencia, Forma de pagamento para calcular a entrega
@@ -43,18 +43,43 @@ while True:
 
     elif escolha == '2':
         print("Esqueceu a senha")
-
-
+    
     elif escolha == '3':
-        print("\n--- Cardápio ---")
-        print("1. X-Bacon - 25,00R$")
-        print("2. X-Tudo - 30,00R$")
-        item = input("escolha o numero do lanche para continuar: ")
+        while True:
+            print("\n--- Menu ---")
+            print("1. Lanches ")
+            print("2. Combos  ")
+            print("3. Bebidas ")
+            
+            sub_escolha = input("Escolha uma opção do menu: ")
+        
+            
+            if sub_escolha == '1':
+                print("Lanches disponiveis")
+                print("- X-Burguer - 15,00R$ ")
+                print("- X-Salada 18,00R$")
+                print("- X-Bacon 20,00R$")
 
+            elif sub_escolha == '2':
+                print("Combos disponiveis")
+                print("- Combo Familia - 45,00R$ ")
+                print("- Combo Duplo 30,00R$")
+                print("- Combo Kid 20,00R$")
+            
+            elif sub_escolha == '3':
+                print("Bebidas Disponiveis")
+                print("- Refrigerante - 5,00R$ ")
+                print("- Suco 7,00R$")
+                print("- Agua 3,00R$")
+            
+            elif sub_escolha == '4':
+                print("Voltando ao menu principal...")
+                break
 
+            else:
+                print("Opção invalida. Tente Novamente")
 
-
-
+    
     elif escolha == '4':
         print("Aqui fica registrado os pedido")
 
